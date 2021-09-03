@@ -29,7 +29,7 @@ This background service reads the Email Request and tries to run some business l
 After completion of this Post-Processing, it is checked if the Email Request is eligible for delivery or not (based on some dummy logic to check Reputation score, Terms&Conditions etc.)
 If it is not eligable then it is added to FailedQueue otherwise depending upon its type (Transactional or Bulk) it is routed to the suitable Queue. 
 
-![Solution Overview](https://github.com/imyounas/pm-iy-emailrouter-demo-app/blob/master/IY.EmailRouter.DemoSloution.png "Solution Overview")
+![Solution Overview](https://github.com/imyounas/pm-iy-emailrouter-demo-app/blob/main/IY.EmailRouter.DemoSloution.png)
 
 For Testing needs, I have added 2 Integration tests, where it will use the existing (configured RabbitMQ settings in the main project) Queue and try to send the message. And some Unit Tests to check that Email message validations are properly working. 
 
