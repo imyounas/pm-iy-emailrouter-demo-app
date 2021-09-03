@@ -1,4 +1,5 @@
 ﻿using ER.Application.Common;
+using ER.Application.Mediators.Command;
 using ER.Application.Models.Email;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,12 +26,29 @@ namespace PM.IY.EmailRouterDemoApp.Controllers
         [Route("Single")]
         public async Task<ActionResult> SingleEmail([FromBody] EmailMessage message)
         {
-            _logger.LogDebug($"Received Single EMail Request [{message.From}]");
+            _logger.LogDebug($"Received Single Email Request [{message.From}]");
 
             try
             {
+                var headers = GetRequestHeaders();
+                //headers.Add(Constants.PM_SERVER_TOKEN, "some token");
+                var emailRequest = new EmailMessageRequest()
+                {
+                    Message = message,
+                    MessageMetaData = new MessageMetaData()
+                    {   
+                        RequestHTTPHeaders = headers
+                    }
+                };
 
-                return Ok();
+                var command = new IngestEmailMessageCommand
+                {
+                    EmailRequestMessage = emailRequest
+                };
+
+                var res = await Mediator.Send(command);
+
+                return res.IsSuccessful ? Ok(res) : BadRequest(res);
             }
             catch (Exception ex)
             {
@@ -47,7 +65,25 @@ namespace PM.IY.EmailRouterDemoApp.Controllers
 
             try
             {
-                return Ok();
+                var headers = GetRequestHeaders();
+                //headers.Add(Constants.PM_SERVER_TOKEN, "some token");
+                var emailRequest = new EmailMessageRequest()
+                {
+                    Message = message,
+                    MessageMetaData = new MessageMetaData()
+                    {
+                        RequestHTTPHeaders = headers
+                    }
+                };
+
+                var command = new IngestEmailMessageCommand
+                {
+                    EmailRequestMessage = emailRequest
+                };
+
+                var res = await Mediator.Send(command);
+
+                return res.IsSuccessful ? Ok(res) : BadRequest(res);
             }
             catch (Exception ex)
             {

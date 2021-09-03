@@ -10,8 +10,6 @@ namespace PM.IY.EmailRouterDemoApp.Controllers
     public abstract class APIBaseController : ControllerBase
     {
         private ISender _mediator;
-
-        //protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();
         protected ISender Mediator
         {
             get

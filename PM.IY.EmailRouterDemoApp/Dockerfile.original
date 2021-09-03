@@ -8,9 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["PM.IY.EmailRouterDemoApp/PM.IY.EmailRouterDemoApp.csproj", "PM.IY.EmailRouterDemoApp/"]
-COPY ["ER.Infrastructure/ER.Infrastructure.csproj", "ER.Infrastructure/"]
-COPY ["ER.Application/ER.Application.csproj", "ER.Application/"]
-COPY ["ER.Domain/ER.Domain.csproj", "ER.Domain/"]
 RUN dotnet restore "PM.IY.EmailRouterDemoApp/PM.IY.EmailRouterDemoApp.csproj"
 COPY . .
 WORKDIR "/src/PM.IY.EmailRouterDemoApp"

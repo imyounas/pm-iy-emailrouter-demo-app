@@ -13,8 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ER.Infrastructure", "ER.Inf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E2434BE-D65C-46C4-965B-1639E15E0BDA}"
 	ProjectSection(SolutionItems) = preProject
+		IY.EmailRouter.DemoSloution.png = IY.EmailRouter.DemoSloution.png
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81F6CDDC-87E0-4CBD-8875-2252BBE26FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ER.Tests", "ER.Tests\ER.Tests.csproj", "{847E207F-AFE9-4710-9C1F-7B65BF143D4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +43,14 @@ Global
 		{F9FD40D3-ED4E-4E96-98EA-ACCE0A1C1242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9FD40D3-ED4E-4E96-98EA-ACCE0A1C1242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9FD40D3-ED4E-4E96-98EA-ACCE0A1C1242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F6CDDC-87E0-4CBD-8875-2252BBE26FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F6CDDC-87E0-4CBD-8875-2252BBE26FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F6CDDC-87E0-4CBD-8875-2252BBE26FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F6CDDC-87E0-4CBD-8875-2252BBE26FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{847E207F-AFE9-4710-9C1F-7B65BF143D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847E207F-AFE9-4710-9C1F-7B65BF143D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847E207F-AFE9-4710-9C1F-7B65BF143D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847E207F-AFE9-4710-9C1F-7B65BF143D4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

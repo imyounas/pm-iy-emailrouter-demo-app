@@ -14,7 +14,8 @@ namespace ER.Application.Common
         public string QueuePassword { get; set; }
         public int QueuePort { get; set; }
         public string MessageInjestQueue { get; init; }
-        public string ProcessTransQueue { get; init; }
-        public string ProcessBatchQueue { get; init; }
+        public string TransMessageQueue { get; init; }
+        public string BulkMessageQueue { get; init; }
+        public string FailMessageQueue { get; init; }
     }
 }

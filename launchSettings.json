@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "serviceActions": {
+        "iyc-rabbitmq": "StartWithoutDebugging",
+        "pm.iy.emailrouterdemoapp": "StartDebugging"
+      },
+      "commandVersion": "1.0"
+    }
+  }
+}

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ER.Application.Models.Email
 {
+    /*
+     * Terms and Conditions Status
+     * 
+     */
     public enum EPMTnCRatings
     {
         AllGood = 1,

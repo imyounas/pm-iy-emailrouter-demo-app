@@ -9,6 +9,6 @@ namespace ER.Domain.Enums
     public enum EmailType
     {
         Transactional = 1,
-        Batch = 2
+        Bulk = 2
     }
 }

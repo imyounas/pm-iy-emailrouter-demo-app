@@ -9,6 +9,8 @@ namespace ER.Application.Common
     public static class Constants
     {
         public const int MAX_RETAINED_MQ_CONNECTIONS = 5;
+        
+        public const string TRANS_STREAM = "outbound";
 
         public const string INVALID_FROM = "E101";
         public const string UNVERIFIED_FROM = "E102";

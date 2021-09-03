@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ER.Application.Models.Email
 {
-    public class EmailResponse
+    public class EmailMessageResponse
     {
-        public EmailResponse(string to)
+        public EmailMessageResponse(string to)
         {
             To = to;
             MessageId = Guid.NewGuid().ToString();
