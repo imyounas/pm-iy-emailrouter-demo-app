@@ -58,7 +58,7 @@ namespace PM.IY.EmailRouterDemoApp
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PM.IY.EmailRouterDemoApp v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

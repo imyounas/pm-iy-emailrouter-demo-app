@@ -2,16 +2,22 @@ version: '3.4'
 
 services:
   pm.iy.emailrouterdemoapp:
-    image: ${DOCKER_REGISTRY-}pmiyemailrouterdemoapp
     build:
       context: .
       dockerfile: PM.IY.EmailRouterDemoApp/Dockerfile
     environment:
-       - QueueHost=iyc-rabbitmq
-       - QueueUserName=guest
-       - QueuePassword=guest
-       - QueuePort=5672  
-       
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https:http://+:80
+      - QueueHost=iyc-rabbitmq
+      - QueueUserName=guest
+      - QueuePassword=guest
+      - QueuePort=5672  
+    ports:
+      - 8000:80
+      - 8003:443
+      - 5000:5000
+      - 5001:5001
+    restart: on-failure   
     depends_on:
       - iyc-rabbitmq   
 
